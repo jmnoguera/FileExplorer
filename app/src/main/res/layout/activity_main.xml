@@ -33,15 +33,17 @@
 
     <TextView
         android:id="@+id/dirName"
-        android:layout_width="217dp"
+        android:layout_width="0dp"
         android:layout_height="39dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:ellipsize="start"
         android:gravity="center|start"
         android:scrollHorizontally="true"
-        android:ellipsize="start"
         android:singleLine="true"
         android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/newFileButton"
         app:layout_constraintStart_toEndOf="@+id/backButton"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,10 +51,10 @@
         android:id="@+id/newFileButton"
         android:layout_width="44dp"
         android:layout_height="42dp"
-        android:layout_marginStart="8dp"
-        android:scaleType="fitCenter"
+        android:layout_marginEnd="8dp"
         android:contentDescription="@string/new_file"
-        app:layout_constraintStart_toEndOf="@+id/dirName"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/newFolderButton"
         app:layout_constraintTop_toTopOf="@+id/dirName"
         app:srcCompat="@drawable/file" />
 
@@ -60,10 +62,11 @@
         android:id="@+id/newFolderButton"
         android:layout_width="42dp"
         android:layout_height="42dp"
-        android:scaleType="fitCenter"
+        android:layout_marginEnd="8dp"
         android:contentDescription="@string/new_folder"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="@+id/newFileButton"
-        app:layout_constraintStart_toEndOf="@+id/newFileButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/newFileButton"
         app:srcCompat="@drawable/folder" />
 </android.support.constraint.ConstraintLayout>
